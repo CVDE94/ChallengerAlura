@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <section class="logos">
+        <img src="./img/cat_00.gif" alt="Logo 1" class="logo" />
+        <h1>Cat Encryptor</h1>
+        <img src="./img/cat_01.gif" alt="Logo 2" class="logo" />
+      </section>
+    </header>
+    <main>
+      <section class="arriba-derecha">
+        <h2>
+          <label for="lb_origin" id="lb_origin">Enter text to encrypt</label>
+        </h2>
+  
+        <section class="entrada_Datos">   
+          <input type="text" id="it_origin" placeholder="Only lowercase letters allowed" onkeyup="soloMinusculas(this)" maxlength="50" />
+        </section>
+        <section class="opciones">
+          <input type="radio" name="r_option" id="opc1" value="1" checked />
+            <label for="opc1">Encrypt</label>
+            <input type="radio" name="r_option" id="opc2" value="2" />
+            <label for="opc2">Decrypt</label>
+        </section>
+        <button onclick="validar()" id="btn_action" class="action-button">Encrypt</button>
+
+        <label for="result" id="lb_result">Resultado encriptado:</label>
+        <section class="resultado">
+          <input type="text" id="it_list" placeholder="result" readonly>
+        </section>
+        <button onclick="copiar()" id="btn_copy" class="action-button">Copy</button>
+        <button onclick="clean()" id="btn_clean" class="action-button">Clean</button>
+      </section>
+
+
+      <section class="arriba-izquierda">
+        <h2>
+          <label id="lb_img_main"></label>
+        </h2>
+        <p>
+        <div id="image-container">
+          <img src="./img/cat-cats-7.gif" alt="Image" id="img_main" />
+        </div>
+        </p>
+      </section>
+    </main>
+    <footer>
+        <p>Autor: Daniel Cruz</p>  
+        <p>Sitio:</p>
+        <a href="https://michidevelop.com/">michidevelop.com </a>
+        <p>Cursos de Alura</p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
